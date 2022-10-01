@@ -1,4 +1,7 @@
 class TodosController < ApplicationController
+  @todos: Todo::ActiveRecord_Relation
+  @todo: Todo
+
   # GET /todos or /todos.json
   def index: () -> untyped
 

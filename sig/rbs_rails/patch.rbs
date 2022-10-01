@@ -1,0 +1,5 @@
+module ActiveRecord
+  class Base
+    def self.primary_abstract_class: () -> void
+  end
+end
