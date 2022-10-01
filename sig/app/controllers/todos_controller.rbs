@@ -1,0 +1,30 @@
+class TodosController < ApplicationController
+  # GET /todos or /todos.json
+  def index: () -> untyped
+
+  # GET /todos/1 or /todos/1.json
+  def show: () -> nil
+
+  # GET /todos/new
+  def new: () -> untyped
+
+  # GET /todos/1/edit
+  def edit: () -> nil
+
+  # POST /todos or /todos.json
+  def create: () -> untyped
+
+  # PATCH/PUT /todos/1 or /todos/1.json
+  def update: () -> untyped
+
+  # DELETE /todos/1 or /todos/1.json
+  def destroy: () -> untyped
+
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_todo: () -> untyped
+
+  # Only allow a list of trusted parameters through.
+  def todo_params: () -> untyped
+end
