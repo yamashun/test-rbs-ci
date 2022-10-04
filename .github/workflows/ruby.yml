@@ -34,6 +34,18 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: Cache rbs collection
+      id: cache-rbs-collection
+      uses: actions/cache@v3
+      env:
+          cache-name: cache-rbs-collection
+      with:
+        path: ~/.gem_rbs_collection
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/rbs_collection.lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
     - run: bundle exec rbs collection install
     - name: Run steep check
       run: bundle exec steep check
