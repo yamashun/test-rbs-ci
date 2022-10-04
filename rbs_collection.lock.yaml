@@ -6,6 +6,10 @@ sources:
   repo_dir: gems
 path: ".gem_rbs_collection"
 gems:
+- name: set
+  version: '0'
+  source:
+    type: stdlib
 - name: actionpack
   version: '6.0'
   source:
@@ -136,10 +140,6 @@ gems:
     repo_dir: gems
 - name: rbs_rails
   version: 0.11.0
-  source:
-    type: rubygems
-- name: steep
-  version: 1.1.1
   source:
     type: rubygems
 - name: timeout

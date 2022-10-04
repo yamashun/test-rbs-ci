@@ -26,8 +26,11 @@
 #   # library "pathname", "set"       # Standard libraries
 # end
 
+
 target :app do
   signature 'sig'
+  # collection_config "rbs_collection.yaml"
+  repo_path ".gem_rbs_collection"
 
   check 'app'
 end
