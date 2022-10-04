@@ -34,5 +34,6 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - run: bundle exec rbs collection install
     - name: Run steep check
       run: bundle exec steep check
