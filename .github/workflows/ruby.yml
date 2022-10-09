@@ -48,4 +48,4 @@ jobs:
           ${{ runner.os }}-
     - run: bundle exec rbs collection install
     - name: Run steep check
-      run: bundle exec steep check
+      run: bundle exec steep check --with-expectations --jobs=2
