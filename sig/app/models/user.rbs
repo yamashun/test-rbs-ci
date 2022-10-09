@@ -1,2 +1,3 @@
 class User < ApplicationRecord
+  def self.hoge: (String title) -> User::ActiveRecord_Relation
 end

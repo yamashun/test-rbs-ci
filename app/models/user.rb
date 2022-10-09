@@ -2,8 +2,8 @@ class User < ApplicationRecord
   has_many :todos
 
   class << self
-    def hoge
-      joins(:todos).merge(Todo.where(title: 'hoge'))
+    def hoge(title)
+      joins(:todos).merge(Todo.where(title: title))
     end
   end
 end
