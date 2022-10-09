@@ -38,7 +38,7 @@ jobs:
       id: cache-rbs-collection
       uses: actions/cache@v3
       env:
-          cache-name: cache-rbs-collection
+        cache-name: cache-rbs-collection
       with:
         path: ~/.gem_rbs_collection
         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/rbs_collection.lock.yaml') }}
