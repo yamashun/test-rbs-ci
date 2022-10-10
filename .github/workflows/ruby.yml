@@ -49,3 +49,5 @@ jobs:
     - run: bundle exec rbs collection install
     - name: Run steep check
       run: bundle exec steep check --with-expectations --jobs=2
+    - name: Run rbs collection update check
+      run: ! git diff --name-only | grep "rbs_collection.lock.yaml"
