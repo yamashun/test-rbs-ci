@@ -52,3 +52,6 @@ jobs:
     - name: Run rbs collection update check
       run: |
         ! git diff --name-only | grep "rbs_collection.lock.yaml"
+    - name: Run rbs rails update check
+      run: |
+        ! git diff --name-only | grep "sig/rbs_rails"
