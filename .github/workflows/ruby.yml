@@ -38,7 +38,7 @@ jobs:
       id: cache-rbs-collection
       uses: actions/cache@v3
       env:
-          cache-name: cache-rbs-collection
+        cache-name: cache-rbs-collection
       with:
         path: ~/.gem_rbs_collection
         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/rbs_collection.lock.yaml') }}
@@ -49,3 +49,11 @@ jobs:
     - run: bundle exec rbs collection install
     - name: Run steep check
       run: bundle exec steep check --with-expectations --jobs=2
+    - name: Run rbs collection update check
+      run: |
+        ! git diff --name-only | grep "rbs_collection.lock.yaml"
+    - name: Run rbs rails install
+      run: bundle exec rails rbs_rails:all
+    - name: Run rbs rails update check
+      run: |
+        ! git diff --name-only | grep "sig/rbs_rails"
