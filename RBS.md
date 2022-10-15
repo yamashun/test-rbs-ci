@@ -44,7 +44,7 @@ TODO: RubyMine などでも利用できるはずですが、動作未確認で�
 ├── .gem_rbs_collection: rbs collectionで自動生成するRBS(git管理対象外)
 ├── sig
 │   ├── app: ./app配下のRBSファイル
-│   ├── gems: rbs collectionで管理していないgemのRBSファイル、rbs collectionで管理しているgemのrbsのpathch
+│   ├── gems: rbs collectionで管理していないgemのRBSファイル
 │   ├── lib: ./lib配下のRBSファイル
 |   ├── standard_lib: RBSが準備されていない標準ライブラリのRBS、パッチを当てたい標準ライブラリのRBS
 │   └── rbs_rails: rbs_railsで自動生成するRBSファイル
